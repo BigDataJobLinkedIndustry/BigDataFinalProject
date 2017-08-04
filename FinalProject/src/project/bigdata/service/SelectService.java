@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import project.bigdata.dao.SearchDAO;
-import project.bigdata.dto.Dto;
+import project.bigdata.dto.ResultDTO;
 
 public class SelectService implements UserService {
 
@@ -22,7 +22,7 @@ public class SelectService implements UserService {
 		String serviceName = request.getParameter("serviceName");
 		
 		//2. DB 처리
-		List<Dto> list = new ArrayList<>();
+		List<ResultDTO> list = new ArrayList<>();
 		
 		try {
 			// 구 이름과 서비스 업종명에 해당하는 상권 정보 받기
@@ -36,6 +36,7 @@ public class SelectService implements UserService {
 		//3. DB 결과 처리
 		request.setAttribute("list", list);
 		//리스트가 잘 담겼는지 확인
+		System.out.println(list.toString());
 		System.out.println(list.size());
 		
 		//이동할 다음 페이지 처리
