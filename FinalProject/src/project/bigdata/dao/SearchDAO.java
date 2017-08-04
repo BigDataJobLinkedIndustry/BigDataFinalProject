@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import project.bigdata.dto.Dto;
+import project.bigdata.dto.ResultDTO;
 import project.bigdata.util.DBUtil;
 
 public class SearchDAO {
@@ -22,35 +22,38 @@ public class SearchDAO {
 	}
 
 	// ----------------------------------------------
-	//구이름과 서비스 업종명 받고 해당 상권정보 리턴
-	public List<Dto> selectAll(String gu, String serviceName) throws SQLException {
-		//DAO에 들어오는지 확인
+	// 구이름과 서비스 업종명 받고 해당 상권정보 리턴
+	public List<ResultDTO> selectAll(String gu, String serviceName) throws SQLException {
+		// DAO에 들어오는지 확인
 		System.out.println("3. SearchDAO");
-		
+
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		List<Dto> list = new ArrayList<>();
-		Dto sbd;
+		List<ResultDTO> list = new ArrayList<>();
+		ResultDTO dto = null;
+		
+		//사용자에게 구이름과 서비스이름을 받으면 select문 실행
 		try {
 			con = DBUtil.getConnection();
-			String sql = "select b.bseatcode bsc, count(b.bseatcode) cnt"
-					+ " from stadium s join game g on s.snum=g.snum"
-					+ " join ballinfo b on b.gcode = g.gcode"
-					+ " where s.sname=?"
-					+ " group by b.bseatcode" 
-					+ " order by b.bseatcode";
+			String sql = "select DISTINCT ar.TRDAR_CD_NM,ar.SALES,ar.FC,ar.FS,ar.FD,ar.FHR from ANALYSISRESULT ar"
+					+ " inner join TBGIS_ALLEY_TRDAR_RELM tatr on ar.TRDAR_CD = tatr.TRDAR_CD"
+					+ " inner join TBSM_TRDAR_STOR tts on tts.TRDAR_CD = tatr.TRDAR_CD"
+					+ " inner join SVC_INDUTY si on si.SVC_INDUTY_CD = tts.SVC_INDUTY_CD"
+					+ " where tatr.SIGNGU_CD_NM =? and si.SVC_INDUTY_CD_NM =?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, gu);
 			pstmt.setString(2, serviceName);
 			rs = pstmt.executeQuery();
 
 			while (rs.next()) {
-				sbd = new Dto(rs.getString("trdar_cd_nm"),
-						rs.getString("svc_induty_cd_nm"),
-						rs.getString("sales"),
-						rs.getString("danger"));
-				list.add(sbd);
+				dto = new ResultDTO(rs.getInt("sales"), 
+						rs.getInt("fc"), 
+						rs.getInt("fs"), 
+						rs.getInt("fd"),
+						rs.getInt("fhr"),  
+						rs.getString("trdar_cd_nm"));
+				list.add(dto);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -58,8 +61,6 @@ public class SearchDAO {
 		} finally {
 			DBUtil.close(rs, pstmt, con);
 		}
-		System.out.println(list.size());
 		return list;
 	}
-
 }
