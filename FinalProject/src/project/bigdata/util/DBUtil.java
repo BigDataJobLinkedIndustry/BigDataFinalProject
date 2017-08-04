@@ -12,13 +12,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class DBUtil {
-
+	//자기가 설정한 URL,ID,PWD 맞게 수정하기
 	private static final String DRIVER_NAME = "oracle.jdbc.driver.OracleDriver";
-	private static final String CON_URL = "jdbc:oracle:thin:@localhost:1521:xe";
-	//private static final String CON_URL = "jdbc:hive2://210.114.91.91:23391/kdatademo_nn";
-	//private static final String DRIVER_NAME = "org.apache.hadoop.hive.jdbc.HiveDriver";
-	private static final String USER_ID = "eduuser";
-	private static final String USER_PWD = "hello.edu";
+	private static final String CON_URL = "jdbc:oracle:thin:@localhost:1521:DBSERVER";
+	private static final String USER_ID = "project2";
+	private static final String USER_PWD = "1234";
 	
 	static {
 		try {
