@@ -41,7 +41,7 @@ public class SelectService implements UserService {
 		//이동할 다음 페이지 처리
 		NextPage nextPage = new NextPage();
 		//이동할 페이지 url 넣을것
-		nextPage.setPageName("./user/search.jsp");
+		nextPage.setPageName("./startbootstrap-modern-business-gh-pages/result.jsp");
 		nextPage.setRedirect(false);
 		return nextPage;
 	}

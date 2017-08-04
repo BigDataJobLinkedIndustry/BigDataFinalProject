@@ -15,10 +15,8 @@ public class DBUtil {
 
 	private static final String DRIVER_NAME = "oracle.jdbc.driver.OracleDriver";
 	private static final String CON_URL = "jdbc:oracle:thin:@localhost:1521:xe";
-	//private static final String CON_URL = "jdbc:hive2://210.114.91.91:23391/kdatademo_nn";
-	//private static final String DRIVER_NAME = "org.apache.hadoop.hive.jdbc.HiveDriver";
-	private static final String USER_ID = "eduuser";
-	private static final String USER_PWD = "hello.edu";
+	private static final String USER_ID = "final";
+	private static final String USER_PWD = "1234";
 	
 	static {
 		try {

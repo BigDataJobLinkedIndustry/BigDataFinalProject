@@ -18,17 +18,14 @@ public class HiveDBUtil {
 	private static final String CON_PWD="hello.edu";
 
 	static {
-		//JVM �������� Ŭ���� �ε�ɋ� �ѹ��� ����Ǵ°�. static����!!!!!!
 		try {
 			Class.forName(DRIVER_NAME);
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 	
 	HiveDBUtil(){
-		//������/ new�ɶ����� ����.
 	}
 	/**
 	 * �����ͺ��̽� ���� �����ϴ� �޼ҵ�

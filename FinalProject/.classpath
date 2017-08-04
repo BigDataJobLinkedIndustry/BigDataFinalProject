@@ -18,5 +18,12 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/hadoop-common-2.7.3.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/hive-exec-1.2.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/hive-jdbc-1.2.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/hive-service-1.2.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/httpclient-4.4.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/httpcore-4.4.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/log4j-1.2.16.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
