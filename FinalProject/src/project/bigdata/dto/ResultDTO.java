@@ -12,6 +12,14 @@ public class ResultDTO {
 	private String trdar_cd;
 	
 	
+	
+	public ResultDTO(int sales, int fhr, String trdar_cd_nm) {
+		super();
+		this.sales = sales;
+		this.fhr = fhr;
+		this.trdar_cd_nm = trdar_cd_nm;
+	}
+	
 	public ResultDTO(int sales, int fc, int fs, int fd, int fhr, String trdar_cd_nm) {
 		super();
 		this.sales = sales;
