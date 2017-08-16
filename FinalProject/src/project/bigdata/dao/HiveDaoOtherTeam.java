@@ -6,22 +6,21 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Calendar;
 
-import project.bigdata.util.DBUtil;
 import project.bigdata.util.HiveDBUtil;
 
 
 
-public class HiveDao {
-	private static HiveDao dao = new HiveDao();
+public class HiveDaoOtherTeam {
+	private static HiveDaoOtherTeam dao = new HiveDaoOtherTeam();
 	
-	private HiveDao() {}
-	public static HiveDao getInstance() {
+	private HiveDaoOtherTeam() {}
+	public static HiveDaoOtherTeam getInstance() {
 		return dao;
 	}
 	Calendar cal = Calendar.getInstance();
     String dateString = String.format("%04d-%02d-%02d", cal.get(Calendar.YEAR), cal.get(Calendar.MONTH) + 1, cal.get(Calendar.DAY_OF_MONTH));
 
-		public int hiveTest() {
+		public int hiveTest(String string) {
 			System.out.println("3. UserDao IdCheck()");
 			Connection con;
 			PreparedStatement pstmt;
