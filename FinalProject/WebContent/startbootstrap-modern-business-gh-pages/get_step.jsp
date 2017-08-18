@@ -16,8 +16,29 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
 </head>
 <body class="main">
+<!-- <script type="text/javascript">
+val trdarListParam = {
+		trdar_cd : "",
+		svc_induty_cd : ""
+};
+
+function setTrderCmprList(trdarCd) {
+	
+	if(trdarListParam.svcIndutyCd == "") {
+		setTrderCmpr(trdarCd);	
+	}else{
+		setTrderCmpr(trdarCd, trdarListParam.svcIndutyCd);
+	}
+	
+}
+
+
+</script> -->
+
+<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
 <!-- 위에 메뉴바 -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -71,8 +92,10 @@
             <span class="icon-next"></span>
         </a>
     </header><br>
+    
+ <script type="text/javascript" src="/js/sgmc/customanals/stepTrdarAnals.js"></script>
  
- <input type="hidden" id= "SVC_STDR_YM_CD" value='201704'>
+ <!-- <input type="hidden" id= "SVC_STDR_YM_CD" value='201704'> -->
  	<div id="body">
  		<div class="bg">
  		
@@ -87,7 +110,7 @@
  				
  				<!-- 당신의 관심업종은? -->
  				<dt class="selected">
- 					<strong class="tit"><a herf="###" id="bodyOne"><span class="ico">1단계</span>관심업종을 선택하세요.</a></strong>
+ 					<strong class="tit">관심업종을 선택하세요.</strong>
  					<div class="rt">
  						<span class="tx1"></span>
  						<a href="###" class="iClose">선택항목 삭제</a>
@@ -191,14 +214,75 @@
 							</ul>
 						</div>
 						<!-- //도소매업 -->
- 						
- 						
- 						
- 					</div> 				
+ 					</div>
+ 					<!-- //업종 -->			
  				</dd>
+ 				<!-- //당신의 관심업종은? -->
  				
+ 				
+ 				<!-- 당신의 창업 구는? -->
+ 				<dt>
+ 					<strong class="tit">관심 지역을 선택하세요.</strong>
+ 					<div class="rt">
+ 						<span class="tx1"></span>
+ 						<a href="###" class="iClose">선택항목 삭제</a>
+ 					</div>
+ 				</dt>
+ 				<dd>
+ 					<div class="mList3 t4 sep">
+ 						<ul>
+ 						<li class="first" signguCd="11680"><a href="#" onclick="return false;">강남구<span class="ico"></span></a></li>
+ 						<li signguCd="11740"><a href="#" onclick="return false;">강동구<span class="ico"></span></a></li>
+ 						<li signguCd="11305"><a href="#" onclick="return false;">강북구<span class="ico"></span></a></li>
+ 						<li signguCd="11500"><a href="#" onclick="return false;">강서구<span class="ico"></span></a></li>
+ 						<li signguCd="11620"><a href="#" onclick="return false;">관악구<span class="ico"></span></a></li>
+ 						<li signguCd="11215"><a href="#" onclick="return false;">광진구<span class="ico"></span></a></li>
+ 						<li signguCd="11530"><a href="#" onclick="return false;">구로구<span class="ico"></span></a></li>
+ 						</ul>
+ 						
+ 						<ul>
+ 						<li class="first" signguCd="11545"><a href="#" onclick="return false;">금천구<span class="ico"></span></a></li>
+ 						<li signguCd="11350"><a href="#" onclick="return false;">노원구<span class="ico"></span></a></li>
+ 						<li signguCd="11320"><a href="#" onclick="return false;">도봉구<span class="ico"></span></a></li>
+ 						<li signguCd="11230"><a href="#" onclick="return false;">동대문구<span class="ico"></span></a></li>
+ 						<li signguCd="11590"><a href="#" onclick="return false;">동작구<span class="ico"></span></a></li>
+ 						<li signguCd="11440"><a href="#" onclick="return false;">마포구<span class="ico"></span></a></li>
+ 						<li signguCd="11410"><a href="#" onclick="return false;">서대문구<span class="ico"></span></a></li>
+ 						</ul>
+ 						
+ 						<ul>
+ 						<li class="first" signguCd="11650"><a href="#" onclick="return false;">서초구<span class="ico"></span></a></li>
+ 						<li signguCd="11200"><a href="#" onclick="return false;">성동구<span class="ico"></span></a></li>
+ 						<li signguCd="11290"><a href="#" onclick="return false;">성북구<span class="ico"></span></a></li>
+ 						<li signguCd="11710"><a href="#" onclick="return false;">송파구<span class="ico"></span></a></li>
+ 						<li signguCd="11470"><a href="#" onclick="return false;">양천구<span class="ico"></span></a></li>
+ 						<li signguCd="11560"><a href="#" onclick="return false;">영등포구<span class="ico"></span></a></li>
+ 						<li signguCd="11170"><a href="#" onclick="return false;">용산구<span class="ico"></span></a></li>					
+ 						</ul>
+ 						
+ 						<ul>
+ 						<li class="first" signguCd="11380"><a href="#" onclick="return false;">은평구<span class="ico"></span></a></li>
+ 						<li signguCd="11110"><a href="#" onclick="return false;">종로구<span class="ico"></span></a></li>
+ 						<li signguCd="11140"><a href="#" onclick="return false;">중구<span class="ico"></span></a></li>
+ 						<li signguCd="11260"><a href="#" onclick="return false;">중랑구<span class="ico"></span></a></li>
+ 						<li><span class="ico"></span></li>
+				        <li><span class="ico"></span></li>
+				        <li><span class="ico"></span></li>
+ 						</ul>
+ 					</div>
+ 					
+ 				<br />
+ 				
+ 				<div class="mButton1">
+ 					<span>
+ 						<a href="###" class="mBtn2 m2 blue">상권검색</a>
+ 					</span>
+ 				</div>	
+ 				</dd>
  				</dl>
  			</div>
+ 			<!-- //단계 선택 -->
+ 			
  			
  			
  		</div>
