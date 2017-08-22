@@ -23,7 +23,7 @@ public class SearchDAO {
 
 	// ----------------------------------------------
 	//구이름과 서비스 업종명 받고 해당 상권정보 리턴
-	public List<ResultDTO> selectAll(String gu, String serviceName) throws SQLException {
+	public List<ResultDTO> selectAll(String guCD, String serviceCD) throws SQLException {
 		//DAO에 들어오는지 확인
 		System.out.println("3. SearchDAO");
 		
@@ -44,10 +44,10 @@ public class SearchDAO {
 					+ " TBGIS_ALLEY_TRDAR_RELM tatr on ar.TRDAR_CD = tatr.TRDAR_CD inner join"
 					+ " TBSM_TRDAR_STOR tts on tts.TRDAR_CD = tatr.TRDAR_CD inner join"
 					+ " SVC_INDUTY si on si.SVC_INDUTY_CD = tts.SVC_INDUTY_CD"
-					+ " where tatr.SIGNGU_CD_NM = ? and si.SVC_INDUTY_CD_NM = ?";
+					+ " where tatr.SIGNGU_CD= ? and si.SVC_INDUTY_CD= ?";
 			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, gu);
-			pstmt.setString(2, serviceName);
+			pstmt.setString(1, guCD);
+			pstmt.setString(2, serviceCD);
 			rs = pstmt.executeQuery();
 
 			while (rs.next()) {
