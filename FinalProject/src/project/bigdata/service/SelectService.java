@@ -19,8 +19,8 @@ public class SelectService implements UserService {
 		System.out.println("2. SelectService");
 		
 		//1. 파라미터인 구 이름과 서비스 업종명 받기
-		String gu = request.getParameter("gu");
-		String serviceName = request.getParameter("serviceName");
+		String guCD = request.getParameter("guCD");
+		String serviceCD = request.getParameter("serviceCD");
 	
 		//2. DB 처리
 		List<ResultDTO> list = null;
@@ -33,7 +33,7 @@ public class SelectService implements UserService {
 		ResultDTO result = new ResultDTO(sales, fc, fs, fd, fhr, trdar_cd_nm);
 		try {
 			// 구 이름과 서비스 업종명에 해당하는 상권 정보 받기
-			list = SearchDAO.getInstance().selectAll(gu, serviceName);
+			list = SearchDAO.getInstance().selectAll(guCD, serviceCD);
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
