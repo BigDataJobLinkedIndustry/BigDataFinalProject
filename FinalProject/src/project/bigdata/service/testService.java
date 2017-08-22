@@ -10,8 +10,8 @@ public class testService {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String gu ="강남구";
-		String serviceName="중국집";
+		String gu ="11110";
+		String serviceName="CS100002";
 		
 		List<ResultDTO> list = null;
 		int fs=0;
