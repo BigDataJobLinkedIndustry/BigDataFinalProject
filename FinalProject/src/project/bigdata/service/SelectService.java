@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import project.bigdata.dao.SearchDAO;
 import project.bigdata.dto.ResultDTO;
 
+
 public class SelectService implements UserService {
 
 	@Override
@@ -18,15 +19,22 @@ public class SelectService implements UserService {
 		System.out.println("2. SelectService");
 		
 		//1. 파라미터인 구 이름과 서비스 업종명 받기
-		String gu = request.getParameter("guCd");
-		String serviceName = request.getParameter("serviceCd");
-		
+
+		String guCD = request.getParameter("guCD");
+		String serviceCD = request.getParameter("serviceCD");
+    
 		//2. DB 처리
-		List<ResultDTO> list = new ArrayList<>();
-		
+		List<ResultDTO> list = null;
+		int fs=0;
+		int fd=0;
+		String trdar_cd_nm=null;
+		int sales=0;
+		int fc=0;
+		int fhr=0;
+		ResultDTO result = new ResultDTO(sales, fc, fs, fd, fhr, trdar_cd_nm);
 		try {
 			// 구 이름과 서비스 업종명에 해당하는 상권 정보 받기
-			list = SearchDAO.getInstance().selectAll(gu, serviceName);
+			list = SearchDAO.getInstance().selectAll(guCD, serviceCD);
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
