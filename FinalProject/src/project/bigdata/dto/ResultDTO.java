@@ -1,6 +1,11 @@
 package project.bigdata.dto;
 
 public class ResultDTO {
+	@Override
+	public String toString() {
+		return "ResultDTO [trdar_cd=" + trdar_cd + ", trdar_cd_nm=" + trdar_cd_nm + ", dnager=" + dnager
+				+ ", sales_degree=" + sales_degree + "]";
+	}
 	private String trdar_cd;
 	private String trdar_cd_nm;
 	private String svc_induty_cd_nm;
@@ -11,19 +16,19 @@ public class ResultDTO {
 	private int sales_degree;
 	
 	
-	public ResultDTO(String trdar_cd, String svc_induty_cd) {
+	public ResultDTO(String trdar_cd, String trdar_cd_nm, int dnager, int sales_degree) {
 		super();
 		this.trdar_cd = trdar_cd;
-		this.svc_induty_cd = svc_induty_cd;
+		this.trdar_cd_nm = trdar_cd_nm;
+		this.dnager = dnager;
+		this.sales_degree = sales_degree;
 	}
 	
 	
 	
-	public ResultDTO(String trdar_cd, int dnager, int sales_degree) {
+	public ResultDTO(String trdar_cd) {
 		super();
 		this.trdar_cd = trdar_cd;
-		this.dnager = dnager;
-		this.sales_degree = sales_degree;
 	}
 
 

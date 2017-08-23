@@ -29,14 +29,14 @@ public class SelectService implements UserService {
 		//2. DB 처리
 		List<ResultDTO> list = null;
 		String trdar_cd=null;
+		String trdar_cd_nm=null;
 		int danger=0;
 		int sales_degree=0;
 		
-		ResultDTO result = new ResultDTO(trdar_cd,danger,sales_degree);
+		ResultDTO result = new ResultDTO(trdar_cd,trdar_cd_nm,danger,sales_degree);
 		try {
 			// 구 코드와 서비스코드에 해당하는 상권 정보 받기
-			list = SearchDAO.getInstance().selectAll(guCd, serviceCd);
-			
+			list = SearchDAO.getInstance().crVIEW1(guCd, serviceCd);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

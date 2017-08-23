@@ -23,7 +23,7 @@ public class SearchDAO {
 
 	// ----------------------------------------------
 	//구이름과 서비스 업종명 받고 해당 상권정보 리턴
-	public List<ResultDTO> selectAll(String guCd, String serviceCd) throws SQLException {
+	public List<ResultDTO> crVIEW1(String guCd, String serviceCd) throws SQLException {
 		//DAO에 들어오는지 확인
 		System.out.println("3. SearchDAO");
 		
@@ -34,18 +34,20 @@ public class SearchDAO {
 		ResultDTO sbd;
 		try {
 			con = DBUtil.getConnection();
-			String sql = "create or replace  noforce view easy_idx as" + 
-					"select r.stdr_ym_cd, r.trdar_cd, r.TRDAR_CD_NM,r.svc_induty_cd_nm, r.danger, r.avg_sales, r.SALES_DEGREE" + 
-					"from result r inner join location l on r.trdar_cd = l.trdar_cd" + 
-					"where r.svc_induty_cd = '?' and l.SIGNGU_CD = '?'";
+			String sql ="select trdar_cd, trdar_cd_nm, round(avg(danger)) as danger, round(avg(sales_degree)) as sales_degree\r\n" + 
+					"from(select r.stdr_ym_cd, r.trdar_cd, r.TRDAR_CD_NM,r.svc_induty_cd_nm, r.danger, r.avg_sales, r.SALES_DEGREE\r\n" + 
+					"from result r inner join location l on r.trdar_cd = l.trdar_cd\r\n" + 
+					"where r.svc_induty_cd = ? and l.SIGNGU_CD = ?)\r\n" + 
+					"group by trdar_cd, trdar_cd_nm";
 			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, guCd);
-			pstmt.setString(2, serviceCd);
+			pstmt.setString(1, serviceCd);
+			pstmt.setString(2, guCd);
 
 			rs = pstmt.executeQuery();
 
 			while (rs.next()) {
 				sbd = new ResultDTO(rs.getString("trdar_cd"),
+						rs.getString("trdar_cd_nm"),
 						rs.getInt("danger"),
 						rs.getInt("sales_degree"));
 				list.add(sbd);
