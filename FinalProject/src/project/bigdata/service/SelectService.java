@@ -20,24 +20,22 @@ public class SelectService implements UserService {
 		
 		//1. 파라미터인 구 이름과 서비스 업종명 받기
 
-		String guCD = request.getParameter("guCd");
-		String serviceCD = request.getParameter("serviceCd");
+		String guCd = request.getParameter("guCd");
+		String serviceCd = request.getParameter("serviceCd");
 		//파라미터들어오는지 확인
-		System.out.println(guCD);
-		System.out.println(serviceCD);
+		System.out.println(guCd);
+		System.out.println(serviceCd);
     
 		//2. DB 처리
 		List<ResultDTO> list = null;
-		int fs=0;
-		int fd=0;
-		String trdar_cd_nm=null;
-		int sales=0;
-		int fc=0;
-		int fhr=0;
-		ResultDTO result = new ResultDTO(sales, fc, fs, fd, fhr, trdar_cd_nm);
+		String trdar_cd=null;
+		int danger=0;
+		int sales_degree=0;
+		
+		ResultDTO result = new ResultDTO(trdar_cd,danger,sales_degree);
 		try {
-			// 구 이름과 서비스 업종명에 해당하는 상권 정보 받기
-			list = SearchDAO.getInstance().selectAll(guCD, serviceCD);
+			// 구 코드와 서비스코드에 해당하는 상권 정보 받기
+			list = SearchDAO.getInstance().selectAll(guCd, serviceCd);
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -53,7 +51,7 @@ public class SelectService implements UserService {
 		//이동할 다음 페이지 처리W
 		NextPage nextPage = new NextPage();
 		//이동할 페이지 url 넣을것
-		nextPage.setPageName("./startbootstrap-modern-business-gh-pages/result.jsp");
+		nextPage.setPageName("./startbootstrap-modern-business-gh-pages/index.jsp");
 		nextPage.setRedirect(false);
 		return nextPage;
 	}
