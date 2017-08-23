@@ -22,6 +22,9 @@ public class SelectService implements UserService {
 
 		String guCd = request.getParameter("guCd");
 		String serviceCd = request.getParameter("serviceCd");
+		//파라미터들어오는지 확인
+		System.out.println(guCd);
+		System.out.println(serviceCd);
     
 		//2. DB 처리
 		List<ResultDTO> list = null;
