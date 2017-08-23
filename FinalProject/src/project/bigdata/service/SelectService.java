@@ -19,10 +19,9 @@ public class SelectService implements UserService {
 		System.out.println("2. SelectService");
 		
 		//1. 파라미터인 구 이름과 서비스 업종명 받기
-
 		String guCD = request.getParameter("guCD");
 		String serviceCD = request.getParameter("serviceCD");
-    
+	
 		//2. DB 처리
 		List<ResultDTO> list = null;
 		int fs=0;
