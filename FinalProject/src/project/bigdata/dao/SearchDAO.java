@@ -34,17 +34,10 @@ public class SearchDAO {
 		ResultDTO sbd;
 		try {
 			con = DBUtil.getConnection();
-			String sql = /*"select * from AnalysisResult";*/
-					/*"select DISTINCT ar.TRDAR_CD_NM,ar.SALES,ar.FC,ar.FS,ar.FD,ar.FHR from ANALYSISRESULT ar"
-		               + " inner join TBGIS_ALLEY_TRDAR_RELM tatr on ar.TRDAR_CD = tatr.TRDAR_CD"
-		               + " inner join TBSM_TRDAR_STOR tts on tts.TRDAR_CD = tatr.TRDAR_CD"
-		               + " inner join SVC_INDUTY si on si.SVC_INDUTY_CD = tts.SVC_INDUTY_CD"
-		               + " where tatr.SIGNGU_CD_NM =강남구 and si.SVC_INDUTY_CD_NM =중국집";*/
-					"select DISTINCT ar.TRDAR_CD_NM,ar.SALES,ar.FC,ar.FS,ar.FD,ar.FHR from ANALYSISRESULT ar inner join"
-					+ " TBGIS_ALLEY_TRDAR_RELM tatr on ar.TRDAR_CD = tatr.TRDAR_CD inner join"
-					+ " TBSM_TRDAR_STOR tts on tts.TRDAR_CD = tatr.TRDAR_CD inner join"
-					+ " SVC_INDUTY si on si.SVC_INDUTY_CD = tts.SVC_INDUTY_CD"
-					+ " where tatr.SIGNGU_CD_NM = ? and si.SVC_INDUTY_CD_NM = ?";
+			String sql = "create or replace  noforce view easy_idx as" + 
+					"select r.stdr_ym_cd, r.trdar_cd, r.TRDAR_CD_NM,r.svc_induty_cd_nm, r.danger, r.avg_sales, r.SALES_DEGREE" + 
+					"from result r inner join location l on r.trdar_cd = l.trdar_cd" + 
+					"where r.svc_induty_cd = '?' and l.SIGNGU_CD = '?'";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, guCd);
 			pstmt.setString(2, serviceCd);
@@ -52,12 +45,9 @@ public class SearchDAO {
 			rs = pstmt.executeQuery();
 
 			while (rs.next()) {
-				sbd = new ResultDTO(rs.getInt("sales"), 
-						rs.getInt("fc"), 
-						rs.getInt("fs"), 
-						rs.getInt("fd"),
-						rs.getInt("fhr"),  
-						rs.getString("trdar_cd_nm"));
+				sbd = new ResultDTO(rs.getString("trdar_cd"),
+						rs.getInt("danger"),
+						rs.getInt("sales_degree"));
 				list.add(sbd);
 			}
 		} catch (SQLException e) {

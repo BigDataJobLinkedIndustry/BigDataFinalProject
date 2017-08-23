@@ -44,23 +44,20 @@ $(function() {
 		var guCd = $("#td2.selected button").val();
 		var serviceCd = $("#td3.selected button").val();
 		var insertCd = {"guCd":guCd, "serviceCd":serviceCd};
-		console.log(guCd);
-		console.log(serviceCd);
-		console.log(insertCd);
+		//console.log(guCd);
+		//console.log(serviceCd);
+		//console.log(insertCd);
 		
-		/*$.ajax({
+		$.ajax({
 			type : "post",
 			url : "../selectAll.project",
 			datatype : "json",
-			data : {
-				insertCd : guCd, serviceCd
-			},
-			
+			data : insertCd,			
 			success : function(data){
-				
+				console.log(data);
 			}
 			
-		});*/
+		});
 		
 	});
 });
