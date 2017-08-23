@@ -63,17 +63,9 @@
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-<script>
-	$(document).ready(function() {
-		$("button").toggle(function() {
-			$(this).css("background-color", "yellow")
-		}, function() {
-			$(this).css("background-color", "#edeee8")
-		});
-	});
-</script>
 
 <style>
+/* 테이블버튼 */
 button {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
@@ -86,14 +78,14 @@ button {
 	-webkit-border-radius: 15px;
 	border-radius: 15px;
 	border: 3px solid #171717;
-	/* -moz-box-shadow: 0px 1px 3px rgba(000, 000, 000, 0.5), inset 0px 0px
+	-moz-box-shadow: 0px 1px 3px rgba(000, 000, 000, 0.5), inset 0px 0px
 		10px rgba(102, 072, 102, 0.7);
 	-webkit-box-shadow: 0px 1px 3px rgba(000, 000, 000, 0.5), inset 0px 0px
 		10px rgba(102, 072, 102, 0.7);
 	box-shadow: 0px 1px 3px rgba(000, 000, 000, 0.5), inset 0px 0px 10px
 		rgba(102, 072, 102, 0.7);
 	text-shadow: 0px -1px 0px rgba(000, 000, 000, 0.4), 0px 1px 0px
-		rgba(255, 255, 255, 0.3); */
+		rgba(255, 255, 255, 0.3);
 }
 
 #three {
@@ -119,9 +111,10 @@ table {
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed"
 					data-toggle="collapse" data-target="#bs-navbar">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand page-scroll" href="#first"><i
 					class="ion-ios-analytics-outline"></i>TEAM NAME</a>
@@ -148,16 +141,6 @@ table {
 					Go </a>
 			</div>
 		</div>
-		<video autoplay="" loop="" class="fillWidth fadeIn wow collapse in"
-			data-wow-delay="0.5s"
-			poster="https://s3-us-west-2.amazonaws.com/coverr/poster/Traffic-blurred2.jpg"
-			id="video-background">
-			<source
-				src="https://s3-us-west-2.amazonaws.com/coverr/mp4/Traffic-blurred2.mp4"
-				type="video/mp4">
-			Your browser does not support the video tag. I suggest you upgrade
-			your browser.
-		</video>
 	</header>
 
 	<br>
@@ -168,9 +151,10 @@ table {
 			<div class="row">
 				<div
 					class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
-					<h3 class="head1">
+					<h2 class="margin-top-0 text-primary">
 						관심지역을 선택해주세요.<span class="tx1">선택해주세요</span>
-					</h3>
+					</h2>
+					<p class="text-faded">
 
 					<table id="table2">
 						<tr id="tr2">
@@ -178,7 +162,7 @@ table {
 								<button value="11680">강남구</button>
 							</td>
 							<td id="td2">
-								<button value="11740" style="width: 136px">강동구</button>
+								<button value="11740">강동구</button>
 							</td>
 							<td id="td2">
 								<button value="11305">강북구</button>
@@ -187,7 +171,7 @@ table {
 								<button value="11500">강서구</button>
 							</td>
 							<td id="td2">
-								<button value="11620" style="width: 136px">관악구</button>
+								<button value="11620">관악구</button>
 							</td>
 							<td id="td2">
 								<button value="11215">광진구</button>
@@ -245,17 +229,17 @@ table {
 								<button value="11380">은평구</button>
 							</td>
 							<td id="td2">
-								<button value="11110" style="width: 136px">종로구</button>
+								<button value="11110">종로구</button>
 							</td>
 							<td id="td2">
-								<button value="11140" style="width: 106px">중구</button>
+								<button value="11140">중구</button>
 							</td>
 							<td id="td2">
 								<button value="11260">중랑구</button>
 							</td>
 						</tr>
 					</table>
-
+					</p>
 					<a href="#two" class="btn btn-default btn-xl page-scroll"> NEXT
 					</a> <br>
 				</div>
@@ -269,9 +253,9 @@ table {
 			<div class="row">
 				<div
 					class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
-					<h3 class="margin-top-0 text-primary">
+					<h2 class="margin-top-0 text-primary">
 						관심업종을 선택하세요 <span class="tx2">선택해주세요</span>
-					</h3>
+					</h2>
 					<div class="tabWrap">
 						<ul class="tab_Menu">
 							<li class="tabMenu current"><a href="#tabContent01"> 외식업
@@ -281,7 +265,7 @@ table {
 						</ul>
 						<div class="tab_Content_Wrap">
 							<div id="tabContent01" class="tabPage">
-								<table id="table3" width="1035">
+								<table id="table3">
 									<tr id="tr3">
 										<td id="td3"><button value="CS100001">한식음식점</button></td>
 										<td id="td3"><button value="CS100003">일식집</button></td>
@@ -299,7 +283,7 @@ table {
 								</table>
 							</div>
 							<div id="tabContent02" class="tabPage">
-								<table id="table3" width="1035">
+								<table id="table3">
 									<tr id="tr3">
 										<td id="td3"><button value="CS200010">노래방</button></td>
 										<td id="td3"><button value="CS200016">미용실</button></td>
@@ -335,7 +319,7 @@ table {
 								</table>
 							</div>
 							<div id="tabContent03" class="tabPage">
-								<table id="table3" width="1035">
+								<table id="table3">
 									<tr id="tr3">
 										<td id="td3"><button value="CS300001">슈퍼마켓</button></td>
 										<td id="td3"><button value="CS300002">편의점</button></td>
@@ -378,14 +362,14 @@ table {
 					<span class="iArr"></span> <span class="txt"><em
 						class="txtEm2">선택된 골목상권</em> 검색결과입니다.<span id="totCntSpan">(0건)</span></span>
 				</div>
-				<div id="trdarList">dfdfdfdf</div>
+				<div id="trdarList"></div>
 				<table>
-		<tr>
-                <td><img src = "12868.png" width ="300" height = "280"></td>
-		<td><div id="columnchart_values"></div></td>
-		<td><div id="chart_div"></div></td>
-		</tr>
-		</table>
+					<tr>
+						<td></td>
+						<td><div id="columnchart_values"></div></td>
+						<td><div id="chart_div"></div></td>
+					</tr>
+				</table>
 
 			</div>
 		</div>
@@ -393,30 +377,30 @@ table {
 
 
 
- 	<aside class="bg-dark">
-        <div class="container text-center">
-            <div class="call-to-action">
-                <h2 class="text-primary"> Made by Team Name </h2>
-            </div>
-            <hr/>
-            <br>
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <div class="row">
-                        <h6 class="wide-space text-center"> Name, Name, Name, Name </h6>
+	<aside class="bg-dark">
+		<div class="container text-center">
+			<div class="call-to-action">
+				<h2 class="text-primary">Made by Team Name</h2>
+			</div>
+			<hr />
+			<br>
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1">
+					<div class="row">
+						<h6 class="wide-space text-center">Name, Name, Name, Name</h6>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </aside>
+					</div>
+				</div>
+			</div>
+		</div>
+	</aside>
 
-    <!--scripts loaded here -->
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/jquery.easing.min.js"></script>
-    <script src="./js/wow.js"></script>
-    <script src="./js/scripts.js"></script>
+	<!--scripts loaded here -->
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/jquery.easing.min.js"></script>
+	<script src="./js/wow.js"></script>
+	<script src="./js/scripts.js"></script>
 </body>
 
 

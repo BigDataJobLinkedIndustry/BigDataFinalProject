@@ -6,11 +6,13 @@ $(function() {
 	$("#td2 button").unbind().bind("click",function() {
 		$("#td2 button").parent().removeClass("selected");
 		$(this).parent().addClass("selected");
-		
+		var guCd = $(this).val();
+		console.log(guCd);
 		//선택 구 표시
 		var guNM = $(this).text();
+		console.log(guNM);
 		$(this).attr("onclick","action_logging({_se_m3:\""+guNM+"\"})");
-		$(".container .head1").eq(0).find(".tx1").html($(this).html());
+		$("#one h2").eq(0).find(".tx1").html($(this).html());
 		
 		//선택유무
 		if($('#td2 button').hasClass("selected")){
@@ -25,11 +27,13 @@ $(function() {
 	$("#td3 button").unbind().bind("click",function() {
 		$("#td3 button").parent().removeClass("selected");
 		$(this).parent().addClass("selected");
-		
+		var serviceCd = $(this).val();
+		console.log(serviceCd);
 		//선택된업종 표시
 		var serviceNM = $(this).text();
+		console.log(serviceNM);
 		$(this).attr("onclick","action_logging({_se_m3:\""+serviceNM+"\"})");
-		$(".container .head2").eq(0).find(".tx2").html($(this).html());
+		$("#two h2").eq(0).find(".tx2").html($(this).html());
 		
 		//선택유무
 		if($('#td3 button').hasClass("selected")){
