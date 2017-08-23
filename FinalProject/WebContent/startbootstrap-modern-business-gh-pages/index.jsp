@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="project.bigdata.dto.ResultDTO"%>
 <%@ page import="project.bigdata.dao.SearchDAO"%>
+<%@ page import="project.bigdata.dto.ResultDTO"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
