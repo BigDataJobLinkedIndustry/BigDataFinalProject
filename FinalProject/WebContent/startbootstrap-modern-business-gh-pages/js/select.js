@@ -44,22 +44,33 @@ $(function() {
 
 	//상권검색
 	$("#btn").click(function(){
+		var htmlText="";
 		var obj = new Object();
 		obj.guCd = $("#td2.selected button").val();
 		obj.serviceCd = $("#td3.selected button").val();
 		
 		var jsonData = JSON.stringify(obj);
-		
 		$.ajax({
 			type : "post",
 			url : "../selectAll.project",
 			datatype : "json",
 			data : {
 				json : jsonData
-				},			
+				},
 			success : function(data){
-				$("#trdarList").html(data);
-				console.log(data);
+				//console.log(data.length);//listJson의 길이와 같은걸 보면 data로 Json 배열이 잘 들어오기는함
+				var listJson = decodeURIComponent(data);//디코딩하여 변수에 담는다.
+				var s_return = $.parseJSON(listJson);//controller에서 return된 JSON Text를 JSON Object로 변경
+				
+				for(var i=0; i<s_return.length; i++){
+					htmlText +="<tr>"
+						+"<td>"+s_return[i].trdar_cd+"</td>"
+						+"<td>"+s_return[i].trdar_cd_nm+"</td>"
+						+"<td>"+s_return[i].danger+"</td>"
+						+"<td>"+s_return[i].sales_degree+"</td>"
+						+"</tr>"
+				}
+				$("#trdarList").html(htmlText);
 			}
 			
 		});
