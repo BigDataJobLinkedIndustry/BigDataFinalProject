@@ -48,6 +48,7 @@ public class SelectService implements UserService {
 		System.out.println(list.toString());
 		System.out.println(list.size());
 		
+		
 		//이동할 다음 페이지 처리W
 		NextPage nextPage = new NextPage();
 		//이동할 페이지 url 넣을것
