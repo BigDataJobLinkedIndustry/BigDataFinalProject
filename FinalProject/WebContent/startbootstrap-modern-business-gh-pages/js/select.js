@@ -6,8 +6,8 @@ $(function() {
 	$("#td2 button").unbind().bind("click",function() {
 		$("#td2 button").parent().removeClass("selected");
 		$(this).parent().addClass("selected");
-		var guCd = $(this).val();
-		console.log(guCd);
+		console.log($(this).val());
+		
 		//선택 구 표시
 		var guNM = $(this).text();
 		console.log(guNM);
@@ -27,8 +27,7 @@ $(function() {
 	$("#td3 button").unbind().bind("click",function() {
 		$("#td3 button").parent().removeClass("selected");
 		$(this).parent().addClass("selected");
-		var serviceCd = $(this).val();
-		console.log(serviceCd);
+		console.log($(this).val());
 		//선택된업종 표시
 		var serviceNM = $(this).text();
 		console.log(serviceNM);
@@ -44,21 +43,23 @@ $(function() {
 	})
 
 	//상권검색
-	$(".mBtn2").click(function(){
-		var guCd = $("#td2.selected button").val();
-		var serviceCd = $("#td3.selected button").val();
-		var insertCd = {"guCd":guCd, "serviceCd":serviceCd};
-		//console.log(guCd);
-		//console.log(serviceCd);
-		//console.log(insertCd);
+	$("#btn").click(function(){
+		var obj = new Object();
+		obj.guCd = $("#td2.selected button").val();
+		obj.serviceCd = $("#td3.selected button").val();
+		
+		var jsonData = JSON.stringify(obj);
 		
 		$.ajax({
 			type : "post",
 			url : "../selectAll.project",
 			datatype : "json",
-			data : insertCd,			
+			data : {
+				json : jsonData
+				},			
 			success : function(data){
-				
+				$("#trdarList").html(data);
+				console.log(data);
 			}
 			
 		});

@@ -31,7 +31,10 @@ public class SearchDAO {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		List<ResultDTO> list = new ArrayList<>();
-		ResultDTO sbd;
+		String trdar_cd=null;
+		String trdar_cd_nm=null;
+		int danger=0;
+		int sales_degree=0;
 		try {
 			con = DBUtil.getConnection();
 			String sql ="select trdar_cd, trdar_cd_nm, round(avg(danger)) as danger, round(avg(sales_degree)) as sales_degree\r\n" + 
@@ -46,11 +49,13 @@ public class SearchDAO {
 			rs = pstmt.executeQuery();
 
 			while (rs.next()) {
-				sbd = new ResultDTO(rs.getString("trdar_cd"),
-						rs.getString("trdar_cd_nm"),
-						rs.getInt("danger"),
-						rs.getInt("sales_degree"));
-				list.add(sbd);
+				ResultDTO r = new ResultDTO(trdar_cd, trdar_cd_nm, danger, sales_degree);
+						
+				r.setTrdar_cd(rs.getString("trdar_cd"));
+				r.setTrdar_cd_nm(rs.getString("trdar_cd_nm"));
+				r.setDanger(rs.getInt("danger"));
+				r.setSales_degree(rs.getInt("sales_degree"));
+				list.add(r);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

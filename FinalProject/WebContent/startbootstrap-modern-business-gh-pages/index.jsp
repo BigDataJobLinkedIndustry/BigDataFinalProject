@@ -344,7 +344,7 @@ table {
 
 
 					<div class="mButton1">
-						<span class="gRight"> <a href="#three"
+						<span class="gRight"> <a id="btn" href="#three"
 							class="btn btn-default btn-xl page-scroll"> SEARCH </a>
 						</span>
 					</div>

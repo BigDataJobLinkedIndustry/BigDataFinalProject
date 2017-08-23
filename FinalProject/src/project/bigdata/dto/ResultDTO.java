@@ -3,7 +3,7 @@ package project.bigdata.dto;
 public class ResultDTO {
 	@Override
 	public String toString() {
-		return "ResultDTO [trdar_cd=" + trdar_cd + ", trdar_cd_nm=" + trdar_cd_nm + ", dnager=" + dnager
+		return "ResultDTO [trdar_cd=" + trdar_cd + ", trdar_cd_nm=" + trdar_cd_nm + ", danger=" + danger
 				+ ", sales_degree=" + sales_degree + "]";
 	}
 	private String trdar_cd;
@@ -11,16 +11,23 @@ public class ResultDTO {
 	private String svc_induty_cd_nm;
 	private String svc_induty_cd;
 	private int clsbiz_rt;
-	private int dnager;
+	private int danger;
 	private int avg_sales;
 	private int sales_degree;
 	
 	
-	public ResultDTO(String trdar_cd, String trdar_cd_nm, int dnager, int sales_degree) {
+	
+	public ResultDTO() {
+		super();
+	}
+
+
+
+	public ResultDTO(String trdar_cd, String trdar_cd_nm, int danger, int sales_degree) {
 		super();
 		this.trdar_cd = trdar_cd;
 		this.trdar_cd_nm = trdar_cd_nm;
-		this.dnager = dnager;
+		this.danger = danger;
 		this.sales_degree = sales_degree;
 	}
 	
@@ -63,11 +70,11 @@ public class ResultDTO {
 	public void setClsbiz_rt(int clsbiz_rt) {
 		this.clsbiz_rt = clsbiz_rt;
 	}
-	public int getDnager() {
-		return dnager;
+	public int getDanger() {
+		return danger;
 	}
-	public void setDnager(int dnager) {
-		this.dnager = dnager;
+	public void setDanger(int danger) {
+		this.danger = danger;
 	}
 	public int getAvg_sales() {
 		return avg_sales;
