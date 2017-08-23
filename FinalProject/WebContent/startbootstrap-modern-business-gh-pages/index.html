@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Landing Zero Free Bootstrap Theme with Video</title>
+    <meta name="description" content="This is a free Bootstrap landing page theme created for BootstrapZero. Feature video background and one page design." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Codeply">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/animate.min.css" />
+    <link rel="stylesheet" href="./css/ionicons.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart1);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Element", "Density", { role: "style" } ],
+        ["매출액", 200, "#b87333"]
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+
+
+
+      var options = {
+        title: "매출분위",
+	//여기에 사이즈 정하면 됨 width, height
+        bar: {groupWidth: "30%"},
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values1"));
+      chart.draw(view, options);
+  }
+  </script>
+
+
+<script type="text/javascript">
+      google.charts.load('current', {'packages':['gauge']});
+      google.charts.setOnLoadCallback(drawChart1);
+
+      function drawChart1() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['Warning', 50]
+        ]);
+
+        var options = {
+	 //여기에 사이즈 정하면 됨 width, height
+          redFrom: 75, redTo: 100,
+          yellowFrom:50, yellowTo: 75,
+          greenFrom:25, greenTo: 50,
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('chart_div1'));
+
+        chart.draw(data, options);
+
+        setInterval(function() {
+          chart.draw(data, options);
+        }, 13000);
+        setInterval(function() {
+          chart.draw(data, options);
+        }, 5000);
+        setInterval(function() {
+          chart.draw(data, options);
+        }, 26000);
+      }
+    </script>
+
+
+
+<style>
+button{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+	padding: 10px 12px;
+	background: -moz-linear-gradient(
+		top,
+		#f0f0f0 0%,
+		#b8b8b8 25%,
+		#6b6b6b 75%,
+		#424242);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#f0f0f0),
+		color-stop(0.25, #b8b8b8),
+		color-stop(0.75, #6b6b6b),
+		to(#424242));
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	border: 3px solid #171717;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 10px rgba(102,072,102,0.7);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 10px rgba(102,072,102,0.7);
+	box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 10px rgba(102,072,102,0.7);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.4),
+		0px 1px 0px rgba(255,255,255,0.3);
+}
+
+#three{
+	background : #313131;
+}
+
+table{
+	width:60%;
+	height:100px;
+	margin:auto;
+}
+</style>
+
+  </head>
+  
+  
+  
+  
+  <body>
+    <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#first"><i class="ion-ios-analytics-outline"></i>TEAM NAME</a>
+            </div>
+            <div class="navbar-collapse collapse" id="bs-navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="page-scroll" href="#one"> Area Select Page </a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#two"> Service Select Page </a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#three"> Result Page </a>
+                    </li>
+            </div>
+        </div>
+    </nav>
+
+    <header id="first">
+        <div class="header-content">
+            <div class="inner">
+                <h1 class="cursive"> TITLE </h1>
+                <h4> If you select area and service then we offer a chart </h4>
+                <hr>
+		<a href="#one" class="btn btn-primary btn-xl page-scroll"> Let's Go </a>
+            </div>
+        </div>
+        <video autoplay="" loop="" class="fillWidth fadeIn wow collapse in" data-wow-delay="0.5s" poster="https://s3-us-west-2.amazonaws.com/coverr/poster/Traffic-blurred2.jpg" id="video-background">
+            <source src="https://s3-us-west-2.amazonaws.com/coverr/mp4/Traffic-blurred2.mp4" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>
+    </header>
+
+    <section class="bg-primary" id="one">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
+                    <h2 class="margin-top-0 text-primary"> Select Area </h2>
+                    <br>
+                    <p class="text-faded">
+                     
+            <table id = "table2">
+            <tr id = "tr2">
+               <td id = "td2"> <button value="11680">강남구</button></td>
+               <td id = "td2"> <button value="11740">강동구</button></td>
+               <td id = "td2"> <button value="11305">강북구</button></td>
+               <td id = "td2"> <button value="11500">강서구</button></td>
+               <td id = "td2"> <button value="11620">관악구</button></td>
+               <td id = "td2"> <button value="11215">광진구</button></td>
+               <td id = "td2"> <button value="11530">구로구</button></td>
+               <td id = "td2"> <button value="11545">금천구</button></td>
+               <td id = "td2"> <button value="11350">노원구</button></td>
+            </tr>
+            <tr id = "tr2">
+               <td id = "td2"> <button value="11320">도봉구</button></td>
+               <td id = "td2"> <button value="11230">동대문구</button></td>
+               <td id = "td2"> <button value="11590">동작구</button></td>
+               <td id = "td2"> <button value="11440">마포구</button></td>
+               <td id = "td2"> <button value="11410">서대문구</button></td>
+               <td id = "td2"> <button value="11650">서초구</button></td>
+               <td id = "td2"> <button value="11200">성동구</button></td>
+               <td id = "td2"> <button value="11290">성북구</button></td>
+               <td id = "td2"> <button value="11710">송파구</button></td>
+            </tr>
+            <tr id = "tr2">
+               <td id = "td2"> <button value="11470">양천구</button></td>
+               <td id = "td2"> <button value="11560">영등포구</button></td>
+               <td id = "td2"> <button value="11170">용산구</button></td>
+               <td id = "td2"> <button value="11380">은평구</button></td>
+               <td id = "td2"> <button value="11110">종로구</button></td>
+               <td id = "td2"> <button value="11140">중구</button></td>
+               <td id = "td2"> <button value="11260">중랑구</button></td>
+            </tr>
+            </table>
+
+                    </p>
+                    <a href="#two" class="btn btn-default btn-xl page-scroll"> NEXT </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section id="two">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
+                    <h2 class="margin-top-0 text-primary"> Select Service </h2>
+                    <br>
+                    <p class="text-faded">
+            <table id = "table2">
+            <tr id = "tr2">
+               <td id = "td2"> <button value="11680">강남구</button></td>
+               <td id = "td2"> <button value="11740">강동구</button></td>
+               <td id = "td2"> <button value="11305">강북구</button></td>
+               <td id = "td2"> <button value="11500">강서구</button></td>
+               <td id = "td2"> <button value="11620">관악구</button></td>
+               <td id = "td2"> <button value="11215">광진구</button></td>
+               <td id = "td2"> <button value="11530">구로구</button></td>
+               <td id = "td2"> <button value="11545">금천구</button></td>
+               <td id = "td2"> <button value="11350">노원구</button></td>
+            </tr>
+            <tr id = "tr2">
+               <td id = "td2"> <button value="11320">도봉구</button></td>
+               <td id = "td2"> <button value="11230">동대문구</button></td>
+               <td id = "td2"> <button value="11590">동작구</button></td>
+               <td id = "td2"> <button value="11440">마포구</button></td>
+               <td id = "td2"> <button value="11410">서대문구</button></td>
+               <td id = "td2"> <button value="11650">서초구</button></td>
+               <td id = "td2"> <button value="11200">성동구</button></td>
+               <td id = "td2"> <button value="11290">성북구</button></td>
+               <td id = "td2"> <button value="11710">송파구</button></td>
+            </tr>
+            <tr id = "tr2">
+               <td id = "td2"> <button value="11470">양천구</button></td>
+               <td id = "td2"> <button value="11560">영등포구</button></td>
+               <td id = "td2"> <button value="11170">용산구</button></td>
+               <td id = "td2"> <button value="11380">은평구</button></td>
+               <td id = "td2"> <button value="11110">종로구</button></td>
+               <td id = "td2"> <button value="11140">중구</button></td>
+               <td id = "td2"> <button value="11260">중랑구</button></td>
+            </tr>
+            </table>
+                    </p>
+                    <a href="#three" class="btn btn-default btn-xl page-scroll"> SEARCH </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="container-fluid" id="three">
+        <div class="row">
+                <h2 class="text-center text-primary"> Result Page </h2>
+                <div class="media wow fadeInRight">
+		<h3> ROAD </h3>
+		<table>
+		<tr>
+                <td><img src = "12868.png" width ="300" height = "280"></td>
+		<td><div id="columnchart_values"></div></td>
+		<td><div id="chart_div1"></div></td>
+		</tr>
+		</table>
+
+		<table>
+		<tr>
+                <td><img src = "12868.png" width ="300" height = "280"></td>
+		<td><div id="columnchart_values2"></div></td>
+		<td><div id="chart_div2"></div></td>
+		</tr>
+		</table>
+	
+    </section>
+
+
+
+
+
+
+    <aside class="bg-dark">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2 class="text-primary"> Made by Team Name </h2>
+            </div>
+            <hr/>
+            <br>
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <div class="row">
+                        <h6 class="wide-space text-center"> Name, Name, Name, Name </h6>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+
+
+
+
+
+
+
+    <!--scripts loaded here -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.easing.min.js"></script>
+    <script src="./js/wow.js"></script>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>

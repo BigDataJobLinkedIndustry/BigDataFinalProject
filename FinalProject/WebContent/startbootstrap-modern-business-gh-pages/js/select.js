@@ -54,7 +54,7 @@ $(function() {
 			datatype : "json",
 			data : insertCd,			
 			success : function(data){
-				console.log(data);
+				
 			}
 			
 		});
