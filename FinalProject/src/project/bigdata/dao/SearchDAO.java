@@ -23,7 +23,7 @@ public class SearchDAO {
 
 	// ----------------------------------------------
 	//구이름과 서비스 업종명 받고 해당 상권정보 리턴
-	public List<ResultDTO> selectAll(String gu, String serviceName) throws SQLException {
+	public List<ResultDTO> selectAll(String guCd, String serviceCd) throws SQLException {
 		//DAO에 들어오는지 확인
 		System.out.println("3. SearchDAO");
 		
@@ -34,20 +34,14 @@ public class SearchDAO {
 		ResultDTO sbd;
 		try {
 			con = DBUtil.getConnection();
-			String sql = /*"select * from AnalysisResult";*/
-					/*"select DISTINCT ar.TRDAR_CD_NM,ar.SALES,ar.FC,ar.FS,ar.FD,ar.FHR from ANALYSISRESULT ar"
-		               + " inner join TBGIS_ALLEY_TRDAR_RELM tatr on ar.TRDAR_CD = tatr.TRDAR_CD"
-		               + " inner join TBSM_TRDAR_STOR tts on tts.TRDAR_CD = tatr.TRDAR_CD"
-		               + " inner join SVC_INDUTY si on si.SVC_INDUTY_CD = tts.SVC_INDUTY_CD"
-		               + " where tatr.SIGNGU_CD_NM =강남구 and si.SVC_INDUTY_CD_NM =중국집";*/
-					"select DISTINCT ar.TRDAR_CD_NM,ar.SALES,ar.FC,ar.FS,ar.FD,ar.FHR from ANALYSISRESULT ar inner join"
+			String sql = "select DISTINCT ar.TRDAR_CD_NM,ar.SALES,ar.FC,ar.FS,ar.FD,ar.FHR from ANALYSISRESULT ar inner join"
 					+ " TBGIS_ALLEY_TRDAR_RELM tatr on ar.TRDAR_CD = tatr.TRDAR_CD inner join"
 					+ " TBSM_TRDAR_STOR tts on tts.TRDAR_CD = tatr.TRDAR_CD inner join"
 					+ " SVC_INDUTY si on si.SVC_INDUTY_CD = tts.SVC_INDUTY_CD"
 					+ " where tatr.SIGNGU_CD_NM = ? and si.SVC_INDUTY_CD_NM = ?";
 			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, gu);
-			pstmt.setString(2, serviceName);
+			pstmt.setString(1, guCd);
+			pstmt.setString(2, serviceCd);
 			rs = pstmt.executeQuery();
 
 			while (rs.next()) {
