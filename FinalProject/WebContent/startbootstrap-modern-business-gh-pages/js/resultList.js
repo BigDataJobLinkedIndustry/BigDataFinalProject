@@ -59,7 +59,7 @@ function showList(jsonResult,index) {
 	function drawChart2() {
 
 		var data = google.visualization.arrayToDataTable([
-				[ 'Label', 'Value' ], [ 'Warning', jsonResult.danger ] ]);
+				[ 'Label', 'Value' ], [ 'Warning', jsonResult.danger*22.5 ] ]);
 
 		var options = {
 			redFrom : 75,

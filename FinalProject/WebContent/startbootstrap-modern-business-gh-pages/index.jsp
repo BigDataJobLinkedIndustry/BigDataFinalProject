@@ -374,7 +374,7 @@ li {
 			<div class="media wow fadeInRight">
 				<div class="mTheme1">
 					<span class="iArr"></span> <span class="txt"><em
-						class="txtEm2">선택된 골목상권</em> 검색결과입니다.<span id="totCntSpan">(0건)</span></span>
+						class="txtEm2">선택된 골목상권</em> 검색결과입니다.<span id="totCntSpan"></span></span>
 				</div>
 				<div></div>
 				<table id="trdarList">
