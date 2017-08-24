@@ -60,7 +60,7 @@ function showList(jsonResult,index) {
 	function drawChart2() {
 
 		var data = google.visualization.arrayToDataTable([
-				[ 'Label', 'Value' ], [ 'Warning', jsonResult.danger ] ]);
+				[ 'Label', 'Value' ], [ 'Warning', jsonResult.danger*22.5 ] ]);
 
 		var options = {
 			//여기에 사이즈 정하면 됨 width, height
