@@ -1,11 +1,6 @@
 package project.bigdata.dto;
 
 public class ResultDTO {
-	@Override
-	public String toString() {
-		return "ResultDTO [trdar_cd=" + trdar_cd + ", trdar_cd_nm=" + trdar_cd_nm + ", danger=" + danger
-				+ ", sales_degree=" + sales_degree + "]";
-	}
 	private String trdar_cd;
 	private String trdar_cd_nm;
 	private String svc_induty_cd_nm;

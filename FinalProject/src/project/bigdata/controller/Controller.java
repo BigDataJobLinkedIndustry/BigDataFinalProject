@@ -49,6 +49,7 @@ public class Controller extends HttpServlet {
 		UserService service = map.get(cmd);
 		System.out.println(cmd);
 		NextPage nextPage = service.execute(request, response);
+		response.setCharacterEncoding("utf-8");
 		
 		if(nextPage == null) {
 			System.out.println("Return Null. Change it");

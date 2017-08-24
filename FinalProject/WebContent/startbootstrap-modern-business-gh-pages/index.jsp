@@ -8,7 +8,6 @@
 <head>
 <meta charset="utf-8">
 <title>상권분석</title>
-<title>Landing Zero Free Bootstrap Theme with Video</title>
 <meta name="description"
 	content="This is a free Bootstrap landing page theme created for BootstrapZero. Feature video background and one page design." />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,8 +21,7 @@
 	src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script type="text/javascript"
 	src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript"
-	src="../startbootstrap-modern-business-gh-pages/js/resultList.js"></script>
+
 <script type="text/javascript">
 	function tabSetting() {
 		// 탭 컨텐츠 hide 후 현재 탭메뉴 페이지만 show
@@ -98,9 +96,11 @@ table {
 	margin: auto;
 }
 </style>
-
+<script type="text/javascript"
+	src="../startbootstrap-modern-business-gh-pages/js/resultList.js"></script>
 <script type="text/javascript"
 	src="../startbootstrap-modern-business-gh-pages/js/select.js"></script>
+
 </head>
 
 <body>

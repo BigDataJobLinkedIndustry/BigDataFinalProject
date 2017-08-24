@@ -49,7 +49,7 @@ $(function() {
 		obj.serviceCd = $("#td3.selected button").val();
 		
 		var jsonData = JSON.stringify(obj);
-		
+		var htmlText = "";
 		$.ajax({
 			type : "post",
 			url : "../selectAll.project",
@@ -58,8 +58,28 @@ $(function() {
 				json : jsonData
 				},			
 			success : function(data){
-				$("#trdarList").html(data);
-				console.log(data);
+				var s_return = $.parseJSON(data);
+				console.log(s_return[1]);
+				$.getScript('./resultList.js/');
+				for(var i=0;i<s_return.length;i++){
+					showList(s_return[i]);
+					
+					/*$.ajax({
+						method : 'post',
+						url : '/resultList.js/',
+						success : showList(s_return[i])
+						
+					});*/
+					
+					
+				/*htmlText += "<ul>"
+					+"<li>"+ s_return[i].trdar_cd +"</li>"
+					+"<li>"+ s_return[i].trdar_cd_nm +"</li>"
+					+"<li>"+ s_return[i].danger +"</li>"
+					+"<li>"+ s_return[i].sales_degree+"</li>"
+					+"</ul>"*/
+				}
+					
 			}
 			
 		});
