@@ -362,13 +362,9 @@ table {
 					<span class="iArr"></span> <span class="txt"><em
 						class="txtEm2">선택된 골목상권</em> 검색결과입니다.<span id="totCntSpan">(0건)</span></span>
 				</div>
-				<div id="trdarList"></div>
-				<table>
-					<tr>
-						<td></td>
-						<td><div id="columnchart_values"></div></td>
-						<td><div id="chart_div"></div></td>
-					</tr>
+				<div></div>
+				<table id="trdarList">
+				
 				</table>
 
 			</div>
