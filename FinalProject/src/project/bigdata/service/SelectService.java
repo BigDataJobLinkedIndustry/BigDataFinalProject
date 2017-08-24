@@ -9,10 +9,8 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.hadoop.hive.ql.metadata.formatting.JsonMetaDataFormatter;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+//import org.apache.hadoop.hive.ql.metadata.formatting.JsonMetaDataFormatter;
+
 import org.json.simple.JSONValue;
 
 import project.bigdata.service.NextPage;
@@ -60,35 +58,29 @@ public class SelectService implements UserService {
 			e.printStackTrace();
 		}
 		
-		//json 배열과 오브젝트 생성
-		JSONArray data = new JSONArray();
-		JSONObject obj = new JSONObject();
-		
-		for(int i=0;i<list.size();i++) {
-			try {
-				obj.put("trdar_cd", list.get(i).getTrdar_cd());
-				obj.put("trdar_cd_nm", list.get(i).getTrdar_cd_nm());
-				obj.put("danger", list.get(i).getDanger());
-				obj.put("sales_degree", list.get(i).getSales_degree());
-				
-				System.out.println("----obj----");
-				System.out.println(obj);
-				//data에 
-				data.put(obj);
-			} catch (JSONException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+		String listJson="";
+		String temp = "";
+		for(int i=0;i<list.size();i++){
+			  temp +="{\"trdar_cd\":"+list.get(i).getTrdar_cd()
+				+",\"trdar_cd_nm\":"+ "\"" + list.get(i).getTrdar_cd_nm() + "\""
+				+",\"danger\":" + list.get(i).getDanger()
+				+",\"sales_degree\":" + list.get(i).getSales_degree();
+
+				if(i==list.size()-1){
+					temp += "}";
+				}else{
+					temp += "},";
+				}
 		}
+
+		listJson = "[" + temp +"]";
 		
 		//js로 내보내줌
-		out.print(data);
+		out.print(listJson);
 		out.flush();
 		out.close();
-		System.out.println("----data----");
-		System.out.println(data);
-		System.out.println(list.size());
-
+		System.out.println("----listJson----");
+		System.out.println(listJson);
 		return null;
 	}
 

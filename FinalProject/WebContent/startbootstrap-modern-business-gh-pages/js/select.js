@@ -59,27 +59,21 @@ $(function() {
 				},			
 			success : function(data){
 				var s_return = $.parseJSON(data);
-				console.log(s_return[1]);
-				$.getScript('./resultList.js/');
-				for(var i=0;i<s_return.length;i++){
-					showList(s_return[i]);
+				
+				$.each(s_return, function(index, item){
+					//console.log(item.trdar_cd);
+					//console.log(item.trdar_cd_nm);
 					
-					/*$.ajax({
-						method : 'post',
-						url : '/resultList.js/',
-						success : showList(s_return[i])
-						
-					});*/
+					//console.log(index);
+					htmlText += "<tr>"
+						+"<td>"+item.trdar_cd_nm+"</td>"
+						+"<td><div id='columnchart_values"+index+"'"+"</div></td>"
+						+"<td><div id='chart_div"+index+"'"+"</div></td>"
+						+"</tr>";
 					
-					
-				/*htmlText += "<ul>"
-					+"<li>"+ s_return[i].trdar_cd +"</li>"
-					+"<li>"+ s_return[i].trdar_cd_nm +"</li>"
-					+"<li>"+ s_return[i].danger +"</li>"
-					+"<li>"+ s_return[i].sales_degree+"</li>"
-					+"</ul>"*/
-				}
-					
+					showList(item,index);
+				});
+				$("#trdarList").html(htmlText);	
 			}
 			
 		});

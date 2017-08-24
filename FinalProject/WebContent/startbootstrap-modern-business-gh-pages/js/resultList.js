@@ -1,8 +1,7 @@
 
-function showList(jsonResult) {
+function showList(jsonResult,index) {
 	console.log("showList")
-	$("#trdarList").html(jsonResult);
-	
+	//console.log(index);
 	//매출액 차트
 	google.charts.load("current", {
 		packages : [ 'corechart' ]
@@ -47,8 +46,9 @@ function showList(jsonResult) {
 			},
 		};
 		var chart = new google.visualization.ColumnChart(document
-				.getElementById("columnchart_values"));
+				.getElementById("columnchart_values"+index));
 		chart.draw(view, options);
+		
 	}
 
 	//위험도 구글차트
@@ -60,7 +60,7 @@ function showList(jsonResult) {
 	function drawChart2() {
 
 		var data = google.visualization.arrayToDataTable([
-				[ 'Label', 'Value' ], [ 'Warning', 50 ] ]);
+				[ 'Label', 'Value' ], [ 'Warning', jsonResult.danger ] ]);
 
 		var options = {
 			//여기에 사이즈 정하면 됨 width, height
@@ -73,7 +73,7 @@ function showList(jsonResult) {
 		};
 
 		var chart = new google.visualization.Gauge(document
-				.getElementById('chart_div'));
+				.getElementById('chart_div'+index));
 
 		chart.draw(data, options);
 
