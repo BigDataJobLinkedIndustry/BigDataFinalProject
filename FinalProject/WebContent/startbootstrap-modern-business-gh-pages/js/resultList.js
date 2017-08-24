@@ -37,7 +37,6 @@ function showList(jsonResult,index) {
 
 		var options = {
 			title : "매출분위",
-			//여기에 사이즈 정하면 됨 width, height
 			bar : {
 				groupWidth : "30%"
 			},
@@ -63,7 +62,6 @@ function showList(jsonResult,index) {
 				[ 'Label', 'Value' ], [ 'Warning', jsonResult.danger*22.5 ] ]);
 
 		var options = {
-			//여기에 사이즈 정하면 됨 width, height
 			redFrom : 75,
 			redTo : 100,
 			yellowFrom : 50,
