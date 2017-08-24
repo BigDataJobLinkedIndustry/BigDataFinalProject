@@ -65,7 +65,7 @@ $(function() {
 					//console.log(item.trdar_cd_nm);
 					
 					//console.log(index);
-					htmlText += "<tr>"
+					htmlText += "<tr width = 200 height = 200>"
 						+"<td>"+item.trdar_cd_nm+"</td>"
 						+"<td><div id='columnchart_values"+index+"'"+"</div></td>"
 						+"<td><div id='chart_div"+index+"'"+"</div></td>"
