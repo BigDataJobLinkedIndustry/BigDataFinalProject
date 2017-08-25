@@ -64,6 +64,7 @@ $(function() {
 				var s_return = $.parseJSON(data);
 				
 				$.each(s_return, function(index, item){
+
 					//결과를 반복해서 출력
 					htmlText += "<tr>"
 						+"<td>"+item.trdar_cd_nm+"</td>"
