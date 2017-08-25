@@ -95,6 +95,19 @@ table {
 	height: 100px;
 	margin: auto;
 }
+ul{
+   list-style:none;
+   }
+
+li{
+	float:left;
+}
+
+.mTheme1{
+	text-align : center;
+}
+
+
 </style>
 <script type="text/javascript"
 	src="../startbootstrap-modern-business-gh-pages/js/resultList.js?v=<%=System.currentTimeMillis() %>"></script>
@@ -150,90 +163,94 @@ table {
 				<div
 					class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
 					<h2 class="margin-top-0 text-primary" align="left">
-						관심지역을 선택해주세요.<span class="tx1" align="right">선택해주세요</span>
+						관심지역을 선택해주세요&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="tx1" align="right"> 지역 </span>
 					</h2>
 					<p class="text-faded">
 
 					<table id="table2">
 						<tr id="tr2">
 							<td id="td2">
-								<button value="11680">강남구</button>
+								<button value="11680" style="width:120px">강남구</button>
 							</td>
 							<td id="td2">
-								<button value="11740">강동구</button>
+								<button value="11740" style="width:120px">강동구</button>
 							</td>
 							<td id="td2">
-								<button value="11305">강북구</button>
+								<button value="11305" style="width:120px">강북구</button>
 							</td>
 							<td id="td2">
-								<button value="11500">강서구</button>
+								<button value="11500" style="width:120px">강서구</button>
 							</td>
 							<td id="td2">
-								<button value="11620">관악구</button>
-							</td>
-							<td id="td2">
-								<button value="11215">광진구</button>
-							</td>
-							<td id="td2">
-								<button value="11530">구로구</button>
-							</td>
-							<td id="td2">
-								<button value="11545">금천구</button>
-							</td>
-							<td id="td2">
-								<button value="11350">노원구</button>
+								<button value="11620" style="width:120px">관악구</button>
 							</td>
 						</tr>
 						<tr id="tr2">
 							<td id="td2">
-								<button value="11320">도봉구</button>
+								<button value="11215" style="width:120px">광진구</button>
 							</td>
 							<td id="td2">
-								<button value="11230">동대문구</button>
+								<button value="11530" style="width:120px">구로구</button>
 							</td>
 							<td id="td2">
-								<button value="11590">동작구</button>
+								<button value="11545" style="width:120px">금천구</button>
 							</td>
 							<td id="td2">
-								<button value="11440">마포구</button>
+								<button value="11350" style="width:120px">노원구</button>
 							</td>
 							<td id="td2">
-								<button value="11410">서대문구</button>
-							</td>
-							<td id="td2">
-								<button value="11650">서초구</button>
-							</td>
-							<td id="td2">
-								<button value="11200">성동구</button>
-							</td>
-							<td id="td2">
-								<button value="11290">성북구</button>
-							</td>
-							<td id="td2">
-								<button value="11710">송파구</button>
+								<button value="11320" style="width:120px">도봉구</button>
 							</td>
 						</tr>
 						<tr id="tr2">
-							<td id="td2">
-								<button value="11470">양천구</button>
+						<td id="td2">
+								<button value="11230" style="width:120px">동대문구</button>
 							</td>
 							<td id="td2">
-								<button value="11560">영등포구</button>
+								<button value="11590" style="width:120px">동작구</button>
 							</td>
 							<td id="td2">
-								<button value="11170">용산구</button>
+								<button value="11440" style="width:120px">마포구</button>
 							</td>
 							<td id="td2">
-								<button value="11380">은평구</button>
+								<button value="11410" style="width:120px">서대문구</button>
 							</td>
 							<td id="td2">
-								<button value="11110">종로구</button>
+								<button value="11650" style="width:120px">서초구</button>
+							</td>
+						</tr>
+						<tr id="tr2">
+						<td id="td2">
+								<button value="11200" style="width:120px">성동구</button>
 							</td>
 							<td id="td2">
-								<button value="11140">중구</button>
+								<button value="11290" style="width:120px">성북구</button>
 							</td>
 							<td id="td2">
-								<button value="11260">중랑구</button>
+								<button value="11710" style="width:120px">송파구</button>
+							</td>
+							<td id="td2">
+								<button value="11470" style="width:120px">양천구</button>
+							</td>
+							<td id="td2">
+								<button value="11560" style="width:120px">영등포구</button>
+							</td>
+						</tr>
+						<tr id="tr2">
+						<td id="td2">
+								<button value="11170" style="width:120px">용산구</button>
+							</td>
+							<td id="td2">
+								<button value="11380" style="width:120px">은평구</button>
+							</td>
+							<td id="td2">
+								<button value="11110" style="width:120px">종로구</button>
+							</td>
+							<td id="td2">
+								<button value="11140" style="width:120px">중구</button>
+							</td>
+							<td id="td2">
+								<button value="11260" style="width:120px">중랑구</button>
 							</td>
 						</tr>
 					</table>
@@ -252,7 +269,7 @@ table {
 				<div
 					class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
 					<h2 class="margin-top-0 text-primary">
-						관심업종을 선택하세요. <span class="tx2">선택해주세요</span>
+						관심업종을 선택하세요 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="tx2">업종</span>
 					</h2>
 					<div class="tabWrap">
 						<ul class="tab_Menu">
@@ -264,81 +281,81 @@ table {
 							<div id="tabContent01" class="tabPage">
 								<table id="table3">
 									<tr id="tr3">
-										<td id="td3"><button value="CS100001">한식음식점</button></td>
-										<td id="td3"><button value="CS100003">일식집</button></td>
-										<td id="td3"><button value="CS100005">분식집</button></td>
-										<td id="td3"><button value="CS100007">치킨집</button></td>
-										<td id="td3"><button value="CS100010">호프간이주점</button></td>
+										<td id="td3"><button value="CS100001" style="width:120px">한식음식점</button></td>
+										<td id="td3"><button value="CS100003" style="width:120px">일식집</button></td>
+										<td id="td3"><button value="CS100005" style="width:120px">분식집</button></td>
+										<td id="td3"><button value="CS100007" style="width:120px">치킨집</button></td>
+										<td id="td3"><button value="CS100010" style="width:120px">호프간이주점</button></td>
 									</tr>
 									<tr id="tr3">
-										<td id="td3"><button value="CS100002">중국집</button></td>
-										<td id="td3"><button value="CS100004">양식집</button></td>
-										<td id="td3"><button value="CS100006">패스트푸드점</button></td>
-										<td id="td3"><button value="CS100008">제과점</button></td>
-										<td id="td3"><button value="CS100009">커피음료</button></td>
+										<td id="td3"><button value="CS100002" style="width:120px">중국집</button></td>
+										<td id="td3"><button value="CS100004" style="width:120px">양식집</button></td>
+										<td id="td3"><button value="CS100006" style="width:120px">패스트푸드점</button></td>
+										<td id="td3"><button value="CS100008" style="width:120px">제과점</button></td>
+										<td id="td3"><button value="CS100009" style="width:120px">커피음료</button></td>
 									</tr>
 								</table>
 							</div>
 							<div id="tabContent02" class="tabPage">
 								<table id="table3">
 									<tr id="tr3">
-										<td id="td3"><button value="CS200010">노래방</button></td>
-										<td id="td3"><button value="CS200016">미용실</button></td>
-										<td id="td3"><button value="CS200001">입시보습학원</button></td>
-										<td id="td3"><button value="CS200005">한의원</button></td>
-										<td id="td3"><button value="CS200011">PC방</button></td>
+										<td id="td3"><button value="CS200010" style="width:120px">노래방</button></td>
+										<td id="td3"><button value="CS200016" style="width:120px">미용실</button></td>
+										<td id="td3"><button value="CS200001" style="width:120px">입시보습학원</button></td>
+										<td id="td3"><button value="CS200005" style="width:120px">한의원</button></td>
+										<td id="td3"><button value="CS200011" style="width:120px">PC방</button></td>
 									</tr>
 									<tr id="tr3">
-										<td id="td3"><button value="CS200018">피부관리실</button></td>
-										<td id="td3"><button value="CS200002">외국어학원</button></td>
-										<td id="td3"><button value="CS200015">노인요양시설</button></td>
-										<td id="td3"><button value="CS200012">당구장</button></td>
-										<td id="td3"><button value="CS200017">네일숍</button></td>
+										<td id="td3"><button value="CS200018" style="width:120px">피부관리실</button></td>
+										<td id="td3"><button value="CS200002" style="width:120px">외국어학원</button></td>
+										<td id="td3"><button value="CS200015" style="width:120px">노인요양시설</button></td>
+										<td id="td3"><button value="CS200012" style="width:120px">당구장</button></td>
+										<td id="td3"><button value="CS200017" style="width:120px">네일숍</button></td>
 									</tr>
 									<tr id="tr3">
-										<td id="td3"><button value="CS200003">예체능학원</button></td>
-										<td id="td3"><button value="CS200021">자동차수리</button></td>
-										<td id="td3"><button value="CS200013">골프연습장</button></td>
-										<td id="td3"><button value="CS200014">헬스클럽</button></td>
-										<td id="td3"><button value="CS200007">보육시설</button></td>
+										<td id="td3"><button value="CS200003" style="width:120px">예체능학원</button></td>
+										<td id="td3"><button value="CS200021" style="width:120px">자동차수리</button></td>
+										<td id="td3"><button value="CS200013" style="width:120px">골프연습장</button></td>
+										<td id="td3"><button value="CS200014" style="width:120px">헬스클럽</button></td>
+										<td id="td3"><button value="CS200007" style="width:120px">보육시설</button></td>
 									</tr>
 									<tr id="tr3">
-										<td id="td3"><button value="CS200022">자동차미용</button></td>
-										<td id="td3"><button value="CS200019">여관업</button></td>
-										<td id="td3"><button value="CS200009">인테리어</button></td>
-										<td id="td3"><button value="CS200006">일반의원</button></td>
-										<td id="td3"><button value="CS200020">세탁소</button></td>
+										<td id="td3"><button value="CS200022" style="width:120px">자동차미용</button></td>
+										<td id="td3"><button value="CS200019" style="width:120px">여관업</button></td>
+										<td id="td3"><button value="CS200009" style="width:120px">인테리어</button></td>
+										<td id="td3"><button value="CS200006" style="width:120px">일반의원</button></td>
+										<td id="td3"><button value="CS200020" style="width:120px">세탁소</button></td>
 									</tr>
 									<tr id="tr3">
-										<td id="td3"><button value="CS200008">부동사중개업</button></td>
-										<td id="td3"><button value="CS200004">치과의원</button></td>
+										<td id="td3"><button value="CS200008" style="width:120px">부동사중개업</button></td>
+										<td id="td3"><button value="CS200004" style="width:120px">치과의원</button></td>
 									</tr>
 								</table>
 							</div>
 							<div id="tabContent03" class="tabPage">
 								<table id="table3">
 									<tr id="tr3">
-										<td id="td3"><button value="CS300001">슈퍼마켓</button></td>
-										<td id="td3"><button value="CS300002">편의점</button></td>
-										<td id="td3"><button value="CS300003">컴퓨터판매수리</button></td>
-										<td id="td3"><button value="CS300004">휴대폰</button></td>
-										<td id="td3"><button value="CS300005">정육점</button></td>
+										<td id="td3"><button value="CS300001" style="width:120px">슈퍼마켓</button></td>
+										<td id="td3"><button value="CS300002" style="width:120px">편의점</button></td>
+										<td id="td3"><button value="CS300003" style="width:120px">컴퓨터판매</button></td>
+										<td id="td3"><button value="CS300004" style="width:120px">휴대폰</button></td>
+										<td id="td3"><button value="CS300005" style="width:120px">정육점</button></td>
 									</tr>
 									<tr id="table3">
-										<td id="td3"><button value="CS300006">과일채소</button></td>
-										<td id="td3"><button value="CS300007">의류점</button></td>
-										<td id="td3"><button value="CS300008">패션잡화</button></td>
-										<td id="td3"><button value="CS300009">약국</button></td>
-										<td id="td3"><button value="CS300010">문구점</button></td>
+										<td id="td3"><button value="CS300006" style="width:120px">과일채소</button></td>
+										<td id="td3"><button value="CS300007" style="width:120px">의류점</button></td>
+										<td id="td3"><button value="CS300008" style="width:120px">패션잡화</button></td>
+										<td id="td3"><button value="CS300009" style="width:120px">약국</button></td>
+										<td id="td3"><button value="CS300010" style="width:120px">문구점</button></td>
 									</tr>
 									<tr id="table3">
-										<td id="td3"><button value="CS300011">화장품</button></td>
+										<td id="td3"><button value="CS300011" style="width:120px">화장품</button></td>
 									</tr>
 								</table>
 							</div>
 						</div>
 					</div>
-
+					<br>
 
 					<div class="mButton1">
 						<span class="gRight"> <a id="btn" href="#three"
@@ -356,10 +373,11 @@ table {
 			<h2 class="text-center text-primary">Result Page</h2>
 			<div class="media wow fadeInRight">
 				<div class="mTheme1">
-					<span class="iArr"></span> <span class="txt"><em
-						class="txtEm2">선택된 골목상권</em> 검색결과입니다.<span id="totCntSpan"></span></span>
+					<span class="iArr"></span><span class="txt">선택된 골목상권 검색결과입니다.<span id="totCntSpan"></span></span>
 				</div>
 				<div></div>
+				<br>
+				<br>
 				<table id="trdarList">
 				
 				</table>
