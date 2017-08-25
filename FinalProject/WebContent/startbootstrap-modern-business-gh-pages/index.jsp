@@ -133,7 +133,7 @@ table {
 		<div class="header-content">
 			<div class="inner">
 				<h1 class="cursive">서울시 상권분석</h1>
-				<h4>If you select area and service then we offer a chart</h4>
+				<h4>빅데이터를 기반으로 창업자에게 창업 정보 제공</h4>
 				<hr>
 				<a href="#one" class="btn btn-primary btn-xl page-scroll"> Let's
 					Go </a>
