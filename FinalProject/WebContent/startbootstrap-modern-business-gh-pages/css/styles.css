@@ -34,7 +34,7 @@ hr.light {
 }
 
 a {
-    color: #9c27b0;
+    color: #c6c6c6;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -88,7 +88,7 @@ p {
 }
 
 .text-primary {
-    color: #9c27b0;
+    color: #c6c6c6;
 }
 
 .modal-content {
@@ -521,4 +521,11 @@ img::selection {
 img::-moz-selection {
     color: #fff;
     background: 0 0;
+}
+
+
+.tab_Menu li a {
+    color: #e6e0e0;
+    font-size: 16px;
+    padding: 0 20px 0 21px;
 }
