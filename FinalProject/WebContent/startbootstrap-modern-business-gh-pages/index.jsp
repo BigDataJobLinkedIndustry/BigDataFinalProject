@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="./css/bootstrap.min.css" />
 <link rel="stylesheet" href="./css/animate.min.css" />
 <link rel="stylesheet" href="./css/ionicons.min.css" />
-<link rel="stylesheet" href="./css/styles.css" />
+<link rel="stylesheet" href="./css/styles.css?v=<%=System.currentTimeMillis() %>" />
 
 <script type="text/javascript"
 	src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -97,9 +97,9 @@ table {
 }
 </style>
 <script type="text/javascript"
-	src="../startbootstrap-modern-business-gh-pages/js/resultList.js"></script>
+	src="../startbootstrap-modern-business-gh-pages/js/resultList.js?v=<%=System.currentTimeMillis() %>"></script>
 <script type="text/javascript"
-	src="../startbootstrap-modern-business-gh-pages/js/select.js"></script>
+	src="../startbootstrap-modern-business-gh-pages/js/select.js?v=<%=System.currentTimeMillis() %>"></script>
 
 </head>
 
@@ -117,14 +117,12 @@ table {
 					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand page-scroll" href="#first"><i
-					class="ion-ios-analytics-outline"></i>TEAM NAME</a>
+					class="ion-ios-analytics-outline"></i>김반장</a>
 			</div>
 			<div class="navbar-collapse collapse" id="bs-navbar">
 				<ul class="nav navbar-nav">
-					<li><a class="page-scroll" href="#one"> Area Select Page </a>
-					</li>
-					<li><a class="page-scroll" href="#two"> Service Select
-							Page </a></li>
+					<li><a class="page-scroll" href="#one"> Area Select Page </a></li>
+					<li><a class="page-scroll" href="#two"> Service Select Page </a></li>
 					<li><a class="page-scroll" href="#three"> Result Page </a></li>
 			</div>
 		</div>
@@ -134,7 +132,7 @@ table {
 	<header id="first">
 		<div class="header-content">
 			<div class="inner">
-				<h1 class="cursive">TITLE</h1>
+				<h1 class="cursive">서울시 상권분석</h1>
 				<h4>If you select area and service then we offer a chart</h4>
 				<hr>
 				<a href="#one" class="btn btn-primary btn-xl page-scroll"> Let's
@@ -151,8 +149,8 @@ table {
 			<div class="row">
 				<div
 					class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
-					<h2 class="margin-top-0 text-primary">
-						관심지역을 선택해주세요.<span class="tx1">선택해주세요</span>
+					<h2 class="margin-top-0 text-primary" align="left">
+						관심지역을 선택해주세요.<span class="tx1" align="right">선택해주세요</span>
 					</h2>
 					<p class="text-faded">
 
@@ -254,12 +252,11 @@ table {
 				<div
 					class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
 					<h2 class="margin-top-0 text-primary">
-						관심업종을 선택하세요 <span class="tx2">선택해주세요</span>
+						관심업종을 선택하세요. <span class="tx2">선택해주세요</span>
 					</h2>
 					<div class="tabWrap">
 						<ul class="tab_Menu">
-							<li class="tabMenu current"><a href="#tabContent01"> 외식업
-							</a></li>
+							<li class="tabMenu current"><a href="#tabContent01"> 외식업</a></li>
 							<li class="tabMenu"><a href="#tabContent02"> 서비스업 </a></li>
 							<li class="tabMenu"><a href="#tabContent03"> 도소매업 </a></li>
 						</ul>
@@ -376,14 +373,14 @@ table {
 	<aside class="bg-dark">
 		<div class="container text-center">
 			<div class="call-to-action">
-				<h2 class="text-primary">Made by Team Name</h2>
+				<h2 class="text-primary">Made by 김반장</h2>
 			</div>
 			<hr />
 			<br>
 			<div class="row">
 				<div class="col-lg-10 col-lg-offset-1">
 					<div class="row">
-						<h6 class="wide-space text-center">Name, Name, Name, Name</h6>
+						<h6 class="wide-space text-center">강영선, 김성준, 김충환, 조강흠</h6>
 
 					</div>
 				</div>
