@@ -14,8 +14,8 @@ import java.sql.SQLException;
 public class DBUtil {
 	//자기가 설정한 URL,ID,PWD 맞게 수정하기
 	private static final String DRIVER_NAME = "oracle.jdbc.driver.OracleDriver";
-	private static final String CON_URL = "jdbc:oracle:thin:@localhost:1521:xe";
-	private static final String USER_ID = "chunghwan";
+	private static final String CON_URL = "jdbc:oracle:thin:@localhost:1521:DBSERVER";
+	private static final String USER_ID = "project2";
 	private static final String USER_PWD = "1234";
 	
 	static {
