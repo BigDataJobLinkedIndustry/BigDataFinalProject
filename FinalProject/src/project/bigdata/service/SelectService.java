@@ -57,7 +57,7 @@ public class SelectService implements UserService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		//상권정보가 담긴 리스를 Json으로 만듬
 		String listJson="";
 		String temp = "";
 		for(int i=0;i<list.size();i++){
@@ -75,14 +75,12 @@ public class SelectService implements UserService {
 
 		listJson = "[" + temp +"]";
 		
-		//js로 내보내줌
+		//selet.js로 내보내줌
 		out.print(listJson);
 		out.flush();
 		out.close();
 		System.out.println("----listJson----");
 		System.out.println(listJson);
-		System.out.println("깃허브테스트");
-		System.out.println("충돌실험");
 		return null;
 	}
 

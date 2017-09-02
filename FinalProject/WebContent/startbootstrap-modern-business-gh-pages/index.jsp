@@ -21,7 +21,10 @@
 	src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script type="text/javascript"
 	src="https://www.gstatic.com/charts/loader.js"></script>
-
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+	
+<!-- 메뉴클릭 이벤트 -->
 <script type="text/javascript">
 	function tabSetting() {
 		// 탭 컨텐츠 hide 후 현재 탭메뉴 페이지만 show
@@ -58,10 +61,8 @@
 		tabSetting();
 	});
 </script>
-
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-
+	
+<!-- css영역 -->
 <style>
 /* 테이블버튼 */
 button {
@@ -106,19 +107,11 @@ li{
 .mTheme1{
 	text-align : center;
 }
-
-
 </style>
-<script type="text/javascript"
-	src="../startbootstrap-modern-business-gh-pages/js/resultList.js?v=<%=System.currentTimeMillis() %>"></script>
-<script type="text/javascript"
-	src="../startbootstrap-modern-business-gh-pages/js/select.js?v=<%=System.currentTimeMillis() %>"></script>
-
 </head>
 
 <body>
-
-	<!-- 위에 메뉴바 -->
+	<!-- 홈페이지 상단 메뉴바 -->
 	<nav id="topNav" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -155,6 +148,7 @@ li{
 	</header>
 
 	<br>
+	<!-- 지역 선택 영역 -->
 	<section class="bg-primary" id="one">
 		<!-- Page Content -->
 		<div class="container">
@@ -261,7 +255,7 @@ li{
 			</div>
 		</div>
 	</section>
-
+	<!-- 서비스업종 선택 영역 -->
 	<section id="two">
 		<div class="container">
 			<!-- Marketing Icons Section -->
@@ -356,7 +350,7 @@ li{
 						</div>
 					</div>
 					<br>
-
+					<!-- 검색버튼 -->
 					<div class="mButton1">
 						<span class="gRight"> <a id="btn" href="#three"
 							class="btn btn-default btn-xl page-scroll"> SEARCH </a>
@@ -367,7 +361,7 @@ li{
 		</div>
 	</section>
 
-
+	<!-- 결과화면 영역 -->
 	<section class="container-fluid" id="three">
 		<div class="row">
 			<h2 class="text-center text-primary">Result Page</h2>
@@ -386,8 +380,7 @@ li{
 		</div>
 	</section>
 
-
-
+	<!-- 제작자 표시 영역 -->
 	<aside class="bg-dark">
 		<div class="container text-center">
 			<div class="call-to-action">
@@ -412,7 +405,8 @@ li{
 	<script src="./js/jquery.easing.min.js"></script>
 	<script src="./js/wow.js"></script>
 	<script src="./js/scripts.js"></script>
+	<script type="text/javascript" src="../startbootstrap-modern-business-gh-pages/js/resultList.js?v=<%=System.currentTimeMillis() %>"></script>
+	<script type="text/javascript" src="../startbootstrap-modern-business-gh-pages/js/select.js?v=<%=System.currentTimeMillis() %>"></script>
+	
 </body>
-
-
 </html>
