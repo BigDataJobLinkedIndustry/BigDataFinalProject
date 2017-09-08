@@ -66,12 +66,15 @@ $(function() {
 				$.each(s_return, function(index, item){
 
 					//결과를 반복해서 출력
-					htmlText += "<tr>"
-						+"<td>"+item.trdar_cd_nm+"</td>"
-						+"<td><img src="+url+item.trdar_cd+".png?raw=true>"+"</td>"
-						+"<td><div id='columnchart_values"+index+"'"+"</div></td>"
-						+"<td><div id='chart_div"+index+"'"+"</div></td>"
+					htmlText += "<tr id = 'html_text'>"
+						+"<td id = 'trdar_cd_nm'>"+item.trdar_cd_nm+"</td>"
+						+"<td id = 'image_sajin'><img src="+url+item.trdar_cd+".png?raw=true></td>"
+						+"<td>" + "</td>"
+						+"<td id = 'columnchart'><div id='columnchart_values"+index+"'"+"</div></td>"
+						+"<td>" + "</td>"
+						+"<td id = 'chart_div'><div id='chart_div"+index+"'"+"</div></td>"
 						+"</tr>";
+					
 					
 					showList(item,index);
 				});
