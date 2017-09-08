@@ -138,14 +138,13 @@ li{
 #title_tr{
 	text-align : center;
 	font-size : 20px;
-	font-family: 'Dancing Script', cursive;
-    text-transform: none;
 }
 #title_td{
 	text-align : center;
 	font-size : 20px;
-	font-family: 'Dancing Script', cursive;
-    text-transform: none;
+}
+#tx1{
+	font-color : yellow;
 }
 </style>
 </head>
@@ -410,7 +409,6 @@ li{
 					<span class="iArr"></span><span class="txt">선택된 골목상권 검색결과입니다.<span id="totCntSpan"></span></span>
 				</div>
 				<div></div>
-				<br>
 				<br>
 				<table>
 				<tr id='title_tr'>
