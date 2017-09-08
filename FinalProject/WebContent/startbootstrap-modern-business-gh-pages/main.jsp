@@ -107,6 +107,46 @@ li{
 .mTheme1{
 	text-align : center;
 }
+
+#trdar_cd_nm{
+	text-align : center;
+	color : black;
+	width : 200px;
+	height : 250px;
+	font-size : 15px;
+}
+
+#html_text{
+	border : 2px solid #444444;
+	background-color : #FAFAFA; 
+}
+
+#columnchart {
+	width : 150px;
+	height : 250px;
+}
+
+#image_sajin {
+	width : 150px;
+	height : 250px;
+}
+
+#chart_div {
+	width : 150px;
+	height : 250px;
+}
+#title_tr{
+	text-align : center;
+	font-size : 20px;
+	font-family: 'Dancing Script', cursive;
+    text-transform: none;
+}
+#title_td{
+	text-align : center;
+	font-size : 20px;
+	font-family: 'Dancing Script', cursive;
+    text-transform: none;
+}
 </style>
 </head>
 
@@ -138,8 +178,8 @@ li{
 	<header id="first">
 		<div class="header-content">
 			<div class="inner">
-				<h1 class="cursive">서울시 상권분석</h1>
-				<h4>빅데이터를 기반으로 창업자에게 창업 정보 제공</h4>
+				<h1 class="cursive">TRADING-AREA ANALYSIS</h1>
+				<h4>빅데이터를 기반으로 창업자에게 상권 정보 제공</h4>
 				<hr>
 				<a href="#one" class="btn btn-primary btn-xl page-scroll"> Let's
 					Go </a>
@@ -372,8 +412,15 @@ li{
 				<div></div>
 				<br>
 				<br>
+				<table>
+				<tr id='title_tr'>
+					<td id='title_td'> 상권이름 </td>
+					<td id='title_td'> 상권사진 </td>
+					<td id='title_td'> 예상매출 </td>
+					<td id='title_td'> 창업위험도 </td>
+				</tr>
+				</table>
 				<table id="trdarList">
-				
 				</table>
 
 			</div>
