@@ -67,14 +67,13 @@ $(function() {
 
 					//결과를 반복해서 출력
 					htmlText += "<tr id = 'html_text'>"
-						+"<td id = 'trdar_cd_nm'>"+item.trdar_cd_nm+"</td>"
+						+"<td id = 'trdar_cd_nm'>"+(index+1)+"."+item.trdar_cd_nm+"</td>"
 						+"<td id = 'image_sajin'><img src="+url+item.trdar_cd+".png?raw=true></td>"
 						+"<td>" + "</td>"
 						+"<td id = 'columnchart'><div id='columnchart_values"+index+"'"+"</div></td>"
 						+"<td>" + "</td>"
 						+"<td id = 'chart_div'><div id='chart_div"+index+"'"+"</div></td>"
 						+"</tr>";
-					
 					
 					showList(item,index);
 				});
