@@ -7,7 +7,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>상권분석</title>
+<title>서울공공데이터를 활용한 빅데이터기반의 기계학습 상권분석</title>
 <meta name="description"
 	content="This is a free Bootstrap landing page theme created for BootstrapZero. Feature video background and one page design." />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="./css/animate.min.css" />
 <link rel="stylesheet" href="./css/ionicons.min.css" />
 <link rel="stylesheet" href="./css/styles.css?v=<%=System.currentTimeMillis() %>" />
+
 <!-- hihi -->
 <script type="text/javascript"
 	src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -23,6 +24,7 @@
 	src="https://www.gstatic.com/charts/loader.js"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+
 	
 <!-- 메뉴클릭 이벤트 -->
 <script type="text/javascript">
@@ -95,7 +97,10 @@ table {
 	width: 60%;
 	height: 100px;
 	margin: auto;
+	border-collapse:collapse;
+    margin-bottom: 10px;
 }
+
 ul{
    list-style:none;
    }
@@ -108,44 +113,68 @@ li{
 	text-align : center;
 }
 
-#trdar_cd_nm{
-	text-align : center;
-	color : black;
-	width : 200px;
-	height : 250px;
-	font-size : 15px;
-}
-
-#html_text{
+.html_text{
 	border : 2px solid #444444;
 	background-color : #FAFAFA; 
 }
 
+#trdar_cd_nm{
+	text-align : center;
+	color : black;
+	width : 250px;
+	height : 250px;
+	font-size : 13px;
+}
+
 #columnchart {
 	width : 150px;
-	height : 250px;
+	height : 200px;
 }
 
 #image_sajin {
 	width : 150px;
-	height : 250px;
+	height : 250px; 
+	float : center;
 }
 
-#chart_div {
+#chartdiv {
 	width : 150px;
-	height : 250px;
+	height : 250px; 
 }
-#title_tr{
+#title_th{
 	text-align : center;
 	font-size : 20px;
 }
-#title_td{
-	text-align : center;
-	font-size : 20px;
+
+
+form {
+    width: 500px;
 }
-#tx1{
-	font-color : yellow;
+
+th, td {
+    padding: 3px 10px;
 }
+.off-screen {
+    display: none;
+}
+#nav {
+    width: 500px;
+    text-align: center;
+}
+#nav a {
+    display: inline-block;
+    padding: 3px 5px;
+    margin-right: 10px;
+    font-family:Tahoma;
+    background: #ccc;
+    color: #000;
+    text-decoration: none;
+}
+#nav a.active {
+    background: #333;
+    color: #fff;
+}
+
 </style>
 </head>
 
@@ -410,17 +439,23 @@ li{
 				</div>
 				<div></div>
 				<br>
-				<table>
-				<tr id='title_tr'>
-					<td id='title_td'> 상권이름 </td>
-					<td id='title_td'> 상권사진 </td>
-					<td id='title_td'> 예상매출 </td>
-					<td id='title_td'> 창업위험도 </td>
-				</tr>
+				<table id="paginated">
+					<form action="" id="setRows">
+						<p>showing
+							<input type="text" name="rowPerPage" value="20">
+						</p>
+					</form>
+				
+					<thead>
+						<tr>
+							<th id='title_th'> 상권이름 </th>
+							<th id='title_th'> 상권사진 </th>
+							<th id='title_th'> 예상매출 </th>
+							<th id='title_th'> 창업위험도 </th>
+						</tr>
+					</thead>
+					<tbody></tbody>
 				</table>
-				<table id="trdarList">
-				</table>
-
 			</div>
 		</div>
 	</section>
@@ -449,8 +484,8 @@ li{
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/jquery.easing.min.js"></script>
 	<script src="./js/wow.js"></script>
-	<script src="./js/scripts.js"></script>
-	<script type="text/javascript" src="../startbootstrap-modern-business-gh-pages/js/resultList.js?v=<%=System.currentTimeMillis() %>"></script>
+	<script src="./js/scripts.js"></script>	
+	<script type="text/javascript" src="../startbootstrap-modern-business-gh-pages/js/drawingCharts.js?v=<%=System.currentTimeMillis() %>"></script>
 	<script type="text/javascript" src="../startbootstrap-modern-business-gh-pages/js/select.js?v=<%=System.currentTimeMillis() %>"></script>
 	
 </body>
